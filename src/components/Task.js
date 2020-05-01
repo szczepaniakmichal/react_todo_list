@@ -2,7 +2,7 @@ import React from "react";
 
 const Task = (props) => {
 
-    const {id, description, startDate, finishDate, important} = props.task;
+    const {id, description, finishDate } = props.task;
 
     return (
         <div>

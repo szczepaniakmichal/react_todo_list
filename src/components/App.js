@@ -6,7 +6,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state ={
+        this.state = {
             tasks: []
         }
     }
@@ -24,22 +24,29 @@ class App extends React.Component {
     }
 
     deleteTask = (id) => {
-        console.log('del', id);
         const tasks = this.state.tasks.filter(item => item.id !== id)
-        console.log(tasks);
         this.setState({
             tasks
         })
     }
 
     changeStatusTask = (id) => {
-        console.log('change status', id);
+        const tasks = [...this.state.tasks];
+        tasks.filter(task => {
+            if (task.id === id) {
+                task.active = false;
+            }
+        })
+        this.setState({
+            tasks
+        })
     }
 
     render() {
         return (
             <>
-            <TaskTodo tasks={this.state.tasks} deleteTask={this.deleteTask} changeStatusTask={this.changeStatusTask}/>
+                <TaskTodo tasks={this.state.tasks} deleteTask={this.deleteTask}
+                          changeStatusTask={this.changeStatusTask}/>
             </>
         )
     }
