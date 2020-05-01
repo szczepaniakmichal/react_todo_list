@@ -1,0 +1,84 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "description": "realizowac hobby",
+      "startDate": "24/3/2020",
+      "finishDate": "3/3/2020",
+      "important": false,
+      "active": true
+    },
+    {
+      "id": 2,
+      "description": "uczyć się programowania",
+      "startDate": "2/11/2019",
+      "finishDate": "6/1/2020",
+      "important": true,
+      "active": false
+    },
+    {
+      "id": 3,
+      "description": "pic wode",
+      "startDate": "22/3/2020",
+      "finishDate": "26/3/2020",
+      "important": false,
+      "active": true
+    },
+    {
+      "id": 4,
+      "description": "wstać od kompa i poćwiczyć",
+      "startDate": "19/7/2019",
+      "finishDate": "12/11/2019",
+      "important": true,
+      "active": false
+    },
+    {
+      "id": 5,
+      "description": "wyjść na spacer",
+      "startDate": "21/8/2019",
+      "finishDate": "25/7/2019",
+      "important": true,
+      "active": true
+    },
+    {
+      "id": 6,
+      "description": "nie zapomnieć o jedzieniu",
+      "startDate": "28/11/2019",
+      "finishDate": "1/7/2019",
+      "important": true,
+      "active": true
+    },
+    {
+      "id": 7,
+      "description": "wrócić do kodu",
+      "startDate": "25/6/2019",
+      "finishDate": "13/5/2019",
+      "important": false,
+      "active": false
+    },
+    {
+      "id": 8,
+      "description": "regularnie wstawać i chodzić spać",
+      "startDate": "18/7/2019",
+      "finishDate": "31/7/2019",
+      "important": false,
+      "active": false
+    },
+    {
+      "id": 9,
+      "description": "relaks",
+      "startDate": "4/1/2020",
+      "finishDate": "8/7/2019",
+      "important": false,
+      "active": true
+    },
+    {
+      "id": 10,
+      "description": "uzupełnić lodówke",
+      "startDate": "11/4/2020",
+      "finishDate": "25/10/2019",
+      "important": false,
+      "active": false
+    }
+  ]
+}
