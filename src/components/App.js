@@ -25,6 +25,11 @@ class App extends React.Component {
 
     deleteTask = (id) => {
         console.log('del', id);
+        const tasks = this.state.tasks.filter(item => item.id !== id)
+        console.log(tasks);
+        this.setState({
+            tasks
+        })
     }
 
     changeStatusTask = (id) => {
