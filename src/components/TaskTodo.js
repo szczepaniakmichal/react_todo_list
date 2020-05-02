@@ -6,6 +6,26 @@ function TaskTodo(props) {
     const active = props.tasks.filter(task => task.active);
     const done = props.tasks.filter(task => !task.active);
 
+    // done.sort((x, y) => {
+    // const a = Date.parse(x.finishDate);
+    // const b = Date.parse(y.finishDate);
+    // console.log(a);
+    // console.log(b)
+    // if (a < b) {
+    //     return 1
+    // }
+    // if (a > b) {
+    //     return -1
+    // }
+    // return 0
+    // });
+
+    active.sort((a, b) => {
+        if (a.description < b.description) return -1;
+        if (a.description > b.description) return 1;
+        return 0;
+    })
+
     const activeTask = active.map(task => <Task key={task.id} task={task} description={task.description}
                                                 finishDate={task.finishDate} deleteTask={props.deleteTask}
                                                 changeStatusTask={props.changeStatusTask}/>)
