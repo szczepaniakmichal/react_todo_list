@@ -17,7 +17,7 @@ function TaskTodo(props) {
     return (
         <>
             <div>
-                <h2>Lista zadań do wykonania</h2>
+                <h2>Lista zadań do wykonania ({activeTask.length})</h2>
                 {activeTask.length > 0 ? activeTask : <p>wszystko co zostało wykonane</p>}
             </div>
             <hr/>

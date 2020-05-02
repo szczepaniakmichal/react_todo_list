@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import AddTask from "./AddTask";
 import TaskTodo from "./TaskTodo";
 
 class App extends React.Component {
@@ -46,6 +47,7 @@ class App extends React.Component {
     render() {
         return (
             <>
+                <AddTask/>
                 <TaskTodo tasks={this.state.tasks} deleteTask={this.deleteTask}
                           changeStatusTask={this.changeStatusTask}/>
             </>
