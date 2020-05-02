@@ -35,6 +35,7 @@ class App extends React.Component {
         tasks.filter(task => {
             if (task.id === id) {
                 task.active = false;
+                task.finishDate = new Date().toLocaleString();
             }
         })
         this.setState({
