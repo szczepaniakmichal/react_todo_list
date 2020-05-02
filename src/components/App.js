@@ -12,6 +12,8 @@ class App extends React.Component {
         }
     }
 
+    counter = 9;
+
     componentDidMount() {
         setTimeout(() => {
             fetch('data/react_todo_list.json')
@@ -44,10 +46,26 @@ class App extends React.Component {
         })
     }
 
+    addTask = (text, checked, date) => {
+        const task = {
+            "id": this.counter,
+            "description": text,
+            "finishDate": date,
+            "important": checked,
+            "active": true
+        }
+
+        this.counter++
+
+        this.setState(prevState => ({
+            tasks: [...prevState.tasks, task]
+        }))
+    }
+
     render() {
         return (
             <>
-                <AddTask/>
+                <AddTask addTask={this.addTask}/>
                 <TaskTodo tasks={this.state.tasks} deleteTask={this.deleteTask}
                           changeStatusTask={this.changeStatusTask}/>
             </>

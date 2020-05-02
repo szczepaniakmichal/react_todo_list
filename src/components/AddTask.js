@@ -31,7 +31,19 @@ class AddTask extends React.Component {
     }
 
     handleClickSubmit = () => {
-        console.log('add ddd')
+        const {text, checked, date} = this.state;
+        if (text.length > 6) {
+            const addTask = this.props.addTask(text, checked, date);
+            if (addTask) {
+                this.setState({
+                    text: "",
+                    checked: false,
+                    date: new Date().toISOString().slice(0, 10)
+                })
+            }
+        } else {
+            console.log('za krótka treść');
+        }
     }
 
     render() {
