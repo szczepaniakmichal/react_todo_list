@@ -21,8 +21,12 @@ function TaskTodo(props) {
     // });
 
     active.sort((a, b) => {
-        if (a.description < b.description) return -1;
-        if (a.description > b.description) return 1;
+
+        a = a.description.toLocaleLowerCase();
+        b = b.description.toLocaleLowerCase();
+
+        if (a < b) return -1;
+        if (a > b) return 1;
         return 0;
     })
 
